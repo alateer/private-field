@@ -1,8 +1,11 @@
+import Todoist from "./layout/Todoist"
+import './App.scss'
+
 function App() {
     return (
-        <>
-            <h1>private field</h1>
-        </>
+        <div className="main">
+            <Todoist />
+        </div>
     )
 }
 

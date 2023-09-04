@@ -1,0 +1,48 @@
+.todoist-header {
+    height: 45px;
+    width: 100%;
+    background-color: rgb(240, 67, 24, 0.9);
+    border-bottom: solid 1px #6fdceb;
+    top: 0px;
+    position: fixed;
+    z-index: 200;
+
+    .todoist-header-nav {
+        display: grid;
+        height: 45px;
+        margin: auto;
+        align-items: center;
+
+        .todoist-icon {
+            margin-left: 20px;
+            grid-area: 1 / 1;
+            display: flex;
+
+            .todoist-description {
+                font-size: 5px;
+                margin-left: 10px;
+            }
+        }
+
+        .todoist-header-info {
+            text-align: right;
+            margin-right: 60px;
+            grid-area: 1 / 2;
+
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+.todoist-content {
+    width: 50%;
+    height: 1000px;
+    background-color: #6fdceb;
+    position: absolute;
+    z-index: 100;
+    top: 60px;
+    left: 300px;
+}
