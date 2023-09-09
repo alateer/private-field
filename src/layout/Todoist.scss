@@ -6,16 +6,15 @@
 }
 
 .todoist-header {
-    height: 45px;
+    height: 35px;
     width: 100%;
-    background-color: rgb(240, 67, 24, 0.9);
-    border-bottom: solid 1px #6fdceb;
+    background-color: #dc65e9;
     position: relative;
     z-index: 200;
 
     .todoist-header-nav {
         display: grid;
-        height: 45px;
+        height: 35px;
         margin: auto;
         align-items: center;
 
@@ -44,21 +43,39 @@
 }
 
 .todoist-content {
-    background-color: #6fdceb;
+    background-color: #e5e0e6;
     margin: auto;
     width: 700px;
     display: flex;
     flex-direction: column;
     position: relative;
     top: 35px;
+    border-radius: 5px;
 
     .content-filter {
         @include box();
-        
     }
 
     .content-tasks {
         @include box();
+
+        .tasks-day-item {
+            position: inherit;
+            margin-left: 10px;
+            margin-bottom: 10px;
+
+            .tasks-day {
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .tasks-item {
+                margin-left: 15px;
+                margin-bottom: 5px;
+                font-size: 13px;
+            }
+        }
     }
 
     .content-add-task {
