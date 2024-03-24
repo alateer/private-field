@@ -1,32 +1,27 @@
-import TaskDayItem from "./TaskDayItem"
-import { scopeTasks } from '../../api'
-import { useState, useEffect  } from 'react'
+import DayTaskItem from "./DayTaskItem"
 
 function Tasks() {
 
-    let [taskList, setTaskList] = useState([])
-
-    const queryScopeTasks = async () => {
-        const { code, data } = await scopeTasks()
-        console.log(code, data)
-        if (!data || +code != 200) taskList = []
-        const { dayTasks } = data
-        setTaskList(dayTasks)
-    }
-
-    useEffect(() => {
-        queryScopeTasks()
-    }, [])
-
+    const dayTasks = [
+        {
+            dayFormat: '2023-01-01',
+            tasks: [
+                {
+                    name: 'aaa',
+                    status: 'do'
+                }
+            ]
+        }
+    ]
 
     return (
         <div className="content-tasks">
             <ul>
-                {taskList.map((dayTask) => (
-                    <li key={dayTask.dayTask}>
-                        <TaskDayItem 
-                            dayFormat={dayTask.dayFormat} 
-                            taskList={dayTask.tasks} 
+                {dayTasks.map((dayTask) => (
+                    <li key={dayTask.dayFormat}>
+                        <DayTaskItem 
+                            dayFormat = {dayTask.dayFormat} 
+                            tasks = {dayTask.tasks} 
                         />
                     </li>
                 ))}

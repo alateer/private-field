@@ -1,16 +1,16 @@
 import Tasks from "./Tasks"
-import AddTask from "./AddTask"
+// import AddTask from "./AddTask"
 
 function Content() {
     return (
         <div className="todoist-content">
-            <div className="content-filter">
+            {/* <div className="content-filter">
                 Filter
-            </div>
+            </div> */}
 
             <Tasks></Tasks>
 
-            <AddTask></AddTask>
+            {/* <AddTask></AddTask> */}
         </div>
     )
 }

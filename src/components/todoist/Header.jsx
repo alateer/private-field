@@ -9,7 +9,7 @@ function Header() {
                 <div className="todoist-icon">
                     <FaListCheck />
                     <span className="todoist-description">
-                        待办清单
+                        Todo
                     </span>
                 </div>
 

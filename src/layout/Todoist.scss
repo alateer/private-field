@@ -80,5 +80,17 @@
 
     .content-add-task {
         @include box();
+        display: flex;
+
+        .add-task-input {
+            outline-style: none;
+            border: 1px solid #ccc;
+            padding: 3px;
+            font-size: 6px;
+            font-family: 'Microsoft soft';
+            width: 500px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
     }
 }
